@@ -8,21 +8,5 @@ python manage.py startapp home
 
 configure your app in settings.py in installed apps
 
-create urls.py in app
-create forms.py in app
-
-
-In forms.py  - import
-from django import forms
-from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm, PasswordResetForm
-
-and make UserCreationForm
-
-
-In views.py import
-from .forms import SignUpForm
-from django.contrib.auth import authenticate, login, logout
-
-In urls.py import 
-from . import views
+Go to settings.py and add your project's secret key and
+email and password to send mail
