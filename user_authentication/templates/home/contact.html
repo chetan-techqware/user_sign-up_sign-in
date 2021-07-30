@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}CONTACT{% endblock title %}
+
+{% block body %} 
+<div style="background-image: url('/static/2.png');background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;">
+
+<div class="container border bg-light py-3 my-3 col-md-6">
+<h3> Contact to Coffee Hustle's Admin </h3>
+<hr class="featurette-divider">
+<form method="post" action="/contact/">
+  {% csrf_token %}
+    <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name="name" aria-describedby="name">
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone Number</label>
+    <input type="phone" class="form-control" id="phone" name="phone">
+  </div>
+  <div class="mb-3">
+    <label for="content" class="form-label">Describe your issue:</label>
+    <textarea class="form-control" name="content" id="content" name="content" cols="10" rows="3"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+{% endblock body %}
